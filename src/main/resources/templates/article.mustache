@@ -1,3 +1,4 @@
+<!-- 多分おなじディレクトリ内の header.mustacheを参照している -->
 {{> header}}
 
 <section class="article">
@@ -6,11 +7,13 @@
 		<p class="article-meta">By  <strong>{{article.author.firstname}}</strong>, on <strong>{{article.addedAt}}</strong></p>
 	</header>
 
+    <!-- logic less でここfor文使わなくても 記事一覧が表示される。多分 -->
 	<div class="article-description">
-		{{article.headline}}
-
-		{{article.content}}
+        <!-- controllerのmodel objectにより渡された変数を参照している -->
+        {{article.headline}}
+        <!-- controllerのmodel objectにより渡された変数を参照している -->
+        {{article.content}}
 	</div>
 </section>
-
+<!-- 多分おなじディレクトリ内の footer.mustacheを参照している -->
 {{> footer}}
